@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-# Author - Hassan Nurudeen
-"""print a string in uppercase followed by a new line"""
 
 
-def uppercase(str):    
-    for c in str:
-        if ord(c) >= 97 and ord(c) <= 122:
-            c = chr(ord(c) - 32)
-        print("{}".format(c), end="")
-    print("")
+def uppercase(str):
+    result = ''
+    for char in str:
+        if ord(char) >= 97 and ord(char) <= 122:
+            result += chr(ord(char) - 32)
+        else:
+            result += char
+    print("{:s}".format(result))
